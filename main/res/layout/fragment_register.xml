@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87ceeb"
+    tools:context="project2.csc214.socialnetwork.login_register.Register">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/register_email"
+            android:inputType="textEmailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/Button_register"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#c2e4f9"
+            android:text="@string/register"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Button_login_transfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:text="@string/login"
+        android:background="#c2e4f9"/>
+
+</FrameLayout>

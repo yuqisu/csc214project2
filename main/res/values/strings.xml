@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SocialNetwork</string>
+    <string name="input_your_name">input your name</string>
+    <string name="input_your_password">input your password</string>
+    <string name="register">Register</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_address">email address</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="username">Username</string>
+    <string name="name">enter yout full name</string>
+    <string name="town">enter your town</string>
+    <string name="something_about_you">Something about you</string>
+    <string name="birthday">birthday:</string>
+    <string name="set_up_your_profile_picture">set up your profile picture</string>
+    <string name="feed">feed</string>
+    <string name="profile">Profile</string>
+    <string name="users">Users</string>
+</resources>

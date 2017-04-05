@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_next"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project2.csc214.socialnetwork.login_register.RegistrationNext">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/register_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#c2e4f9"
+            android:text="@string/set_up_your_profile_picture"
+            />
+        <EditText
+            android:id="@+id/register_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/register_town"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/town"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/regirster_bithday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birthday"/>
+            <Button
+                android:id="@+id/regirster_bithday_pick"
+                android:layout_marginLeft="60dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:background="#c2e4f9"
+                />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/register_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:hint="@string/something_about_you"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/login_in_next_register"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#c2e4f9"
+            android:text="@string/login"
+            />
+    </LinearLayout>
+
+
+
+</FrameLayout>
