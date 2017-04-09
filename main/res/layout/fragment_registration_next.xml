@@ -3,7 +3,7 @@
     android:id="@+id/register_next"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="project2.csc214.socialnetwork.login_register.RegistrationNext">
+    tools:context="project2.csc214.socialnetwork.Login_createAccount">
 
     <LinearLayout
         android:layout_width="match_parent"

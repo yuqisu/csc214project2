@@ -13,8 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import database.MyDatabase;
 import model.User;
-import model.UserCollection;
 import project2.csc214.socialnetwork.R;
 
 
@@ -26,7 +26,7 @@ public class Register extends Fragment {
     EditText passwordbox;
     Button rButton;
     Button logtransButton;
-    public static UserCollection mcollection;
+    public static MyDatabase mcollection;
     public Register() {
         // Required empty public constructor
     }
@@ -36,7 +36,7 @@ public class Register extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mcollection = UserCollection.get(getActivity());
+        mcollection = MyDatabase.get(getActivity().getApplicationContext());
 
         View view = inflater.inflate(R.layout.fragment_register, container, false);
         emailbox = (EditText)view.findViewById(R.id.register_email);
@@ -63,7 +63,7 @@ public class Register extends Fragment {
                     Toast.makeText(getActivity(),"new account created!",Toast.LENGTH_SHORT).show();
                     user.setEmail(email);
                     user.setPassword(password);
-                    mcollection.addUser(user);
+                    mcollection.setCurrentUser(user);
                     FragmentManager manager =getFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
                     RegistrationNext next = new RegistrationNext();

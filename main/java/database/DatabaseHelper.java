@@ -39,6 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + Schema.Favorite.FAVORITES+
                 "(_id integer primary key autoincrement, "
                 +Schema.Favorite.Info.EMAIL + " , "
+                +Schema.Favorite.Info.ID + " , "
                 +Schema.Favorite.Info.FAVORITE + " )"
         );
     }

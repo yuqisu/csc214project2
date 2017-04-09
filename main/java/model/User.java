@@ -10,7 +10,7 @@ import java.util.Date;
 public class User {
     private String fullname;
     private String password;
-    private Date birthday;
+    private String birthday;
     private String hometown;
     private String profilePic;
     private String bio;
@@ -36,11 +36,11 @@ public class User {
         this.password = password;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

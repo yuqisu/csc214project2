@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#87ceeb"
-    tools:context="project2.csc214.socialnetwork.login_register.Register">
+    tools:context="project2.csc214.socialnetwork.Login_createAccount">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout

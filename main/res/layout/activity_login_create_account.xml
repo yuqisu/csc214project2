@@ -4,7 +4,7 @@
     android:id="@+id/activity_login_create_account"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="project2.csc214.socialnetwork.login_register.Login_createAccount">
+    tools:context="project2.csc214.socialnetwork.Login_createAccount">
 
 <FrameLayout
     android:id="@+id/login_register_page"

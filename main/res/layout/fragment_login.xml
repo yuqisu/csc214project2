@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#87ceeb"
-    tools:context="project2.csc214.socialnetwork.login_register.Login">
+    tools:context=".Login_createAccount">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -13,9 +13,10 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/userName"
+            android:id="@+id/login_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             android:hint="@string/username"
             android:layout_gravity="center" />
 

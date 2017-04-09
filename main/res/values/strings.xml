@@ -18,4 +18,9 @@
     <string name="feed">feed</string>
     <string name="profile">Profile</string>
     <string name="users">Users</string>
+    <string name="post">POST</string>
+    <string name="cancel">CANCEL</string>
+    <string name="dialogmessage">Do you want to follow this user?\n the posts would be appear on your feed page</string>
+    <string name="title">Interested?</string>
+    <string name="unfollow">Are you sure to unfollow?\n you would not get posts from him/her</string>
 </resources>

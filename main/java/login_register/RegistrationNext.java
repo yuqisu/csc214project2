@@ -17,7 +17,8 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Date;
 
-import model.UserCollection;
+import database.MyDatabase;
+import model.User;
 import project2.csc214.socialnetwork.R;
 
 
@@ -26,7 +27,7 @@ import project2.csc214.socialnetwork.R;
  */
 public class RegistrationNext extends Fragment {
 
-    private UserCollection mcollection;
+    private MyDatabase mcollection;
     private Button mprofile;
     private EditText mName;
     private TextView mbirthday;
@@ -34,6 +35,7 @@ public class RegistrationNext extends Fragment {
     private EditText mTown;
     private EditText mBio;
     private Button mlogin;
+    User user;
     public RegistrationNext() {
         // Required empty public constructor
     }
@@ -42,6 +44,8 @@ public class RegistrationNext extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        mcollection = MyDatabase.get(getActivity().getApplicationContext());
+        user = mcollection.getCurrentUser();
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_registration_next, container, false);
         mprofile = (Button)view.findViewById(R.id.register_picture);
@@ -67,10 +71,14 @@ public class RegistrationNext extends Fragment {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         mbirthday.setText(dayOfMonth+" - "+(month+1)+" "+year);
+                        user.setBirthday(dayOfMonth+" - "+(month+1)+" "+year);
+
                     }
                 },year,month,date);
                 datePickerDialog.show();
-                calendar.set(year,month,date);
+
+
+
             }
 
         });
@@ -80,9 +88,14 @@ public class RegistrationNext extends Fragment {
         mlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String name = mName.getText().toString();
+                user.setFullname(name);
                 String town =mTown.getText().toString();
+                user.setHometown(town);
                 String bio = mBio.getText().toString();
+                user.setBio(bio);
+                mcollection.insertUser(user);
                 FragmentManager manager =getFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
                 Login login = new Login();
@@ -95,9 +108,9 @@ public class RegistrationNext extends Fragment {
         return view;
     }
 
-    public void updateInformation(String name, Date birth,String filePath,String town, String bio){
-        mcollection.updateUser(mcollection.getLatestUser(),name,birth,filePath,town,bio);
-    }
+//    public void updateInformation(String name, Date birth,String filePath,String town, String bio){
+//        mcollection.updateUser(mcollection.getLatestUser(),name,birth,filePath,town,bio);
+//    }
 
 
 }
